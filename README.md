@@ -69,15 +69,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBmkncRYFuIWvVzHJXMC9JIci9SUept-Mw",
-  authDomain: "amz-clone-6f040.firebaseapp.com",
-  databaseURL: "https://amz-clone-6f040.firebaseio.com",
-  projectId: "amz-clone-6f040",
-  storageBucket: "amz-clone-6f040.appspot.com",
-  messagingSenderId: "1065824616535",
-  appId: "1:1065824616535:web:db5dec49ca95271cc32312",
-  measurementId: "G-D8MHFCZZPH"
-};
+For Live demo click https://amz-clone-6f040.web.app/ 

@@ -1,0 +1,16 @@
+.subtotal{
+    width:300px;
+    margin-left:15px;
+    margin-top: 20px;
+}
+
+.subtotal__cta{
+    background-color: #f0c14b;
+    cursor: pointer;
+    padding: 5px;
+    align-items: center;
+    border: 1px solid;
+    max-width: 150px;
+    margin-top:15px;
+    border-color : #a88734 #9c7e31 #846a29;
+}

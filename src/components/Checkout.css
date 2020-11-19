@@ -1,0 +1,29 @@
+.checkout {
+    display: flex;
+    margin-top: 10px;
+    max-width: 90%;
+}
+
+.checkout__card{
+    padding : 10px;
+    margin-left: 5px;
+    width:900px;
+    border: 2px;
+    background-color: #fff;
+}
+
+.checkoutProduct__deselect{
+    text-decoration: none;
+    color:#007185;
+    border-bottom: 1px solid gray;
+}
+
+.checkoutProduct__cart{
+    margin-left:15px;
+    width:1450px;
+}
+
+.checkoutProduct__cart-title{
+    border-bottom: 1px solid grey;
+    /* width:550px; */
+}

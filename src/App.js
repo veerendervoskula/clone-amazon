@@ -1,24 +1,68 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom'
+import Header from './components/Header';
+import HeroBanner from './components/HeroBanner';
+import { useStateValue } from './context/StateProvider';
+import Checkout from './components/Checkout';
+import Login from './components/Login';
+import { useEffect } from 'react';
+import { auth } from './firebase';
 
 function App() {
+  const [{ user }, dispatch] = useStateValue();
+  useEffect(() => {
+    console.log('am inside app.js');
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      console.log('onAuthStateChanged');
+      if (authUser) {
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        });
+      } else {
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        });
+      }
+    });
+
+    return () =>{
+      console.log('am inside unsubscribe');
+      unsubscribe();
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/signin">
+            <Login />
+          </Route>
+          <Route path="/returns-orders">
+            <h1>Orders</h1>
+          </Route>
+          <Route path="/checkout">
+            <Header />
+            <div className="checkout">
+              <Checkout />
+            </div>
+          </Route>
+          <Route path="/prime">
+            <h1>Prime</h1>
+          </Route>
+          <Route path="/">
+            <Header />
+            <HeroBanner />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
