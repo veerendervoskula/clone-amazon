@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+### For Live demo  
+
+Deployed to fire base cloud https://amz-clone-6f040.web.app/ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -69,4 +73,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-For Live demo click https://amz-clone-6f040.web.app/ 
